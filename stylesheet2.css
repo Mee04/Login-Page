@@ -9,9 +9,11 @@ html,
 body {
   height: 100%;
   --spacing: 50px;
+  --gap: 20px;
+  --black: #000000;
 }
 body {
-  background-color: #000000;
+  background-color: var(--black);
   display: grid;
   place-items: center;
 }
@@ -43,23 +45,23 @@ body {
   font-weight: 500;
 }
 .heading{
-  margin: 20px auto;
+  margin: var(--gap) auto;
 }
 .login-form {
   background-color: white;
   display: block;
-  margin: 20px auto;
+  margin: var(--gap) auto;
   padding: calc(var(--spacing) / 2);
   width: 100%;
 }
 .form-inputs{
-  padding: 20px 0;
+  padding: var(--gap) 0;
 }
 
 input {
-  padding: 10px 0px;
-  border: 1px solid #000000;
-  border-radius: 10px;
+  padding: calc(var(--gap)/2) 0px;
+  border: 1px solid var(--black);
+  border-radius: calc(var(--gap)/2);
   background: transparent;
   display: block;
   width: 100%;
@@ -67,7 +69,7 @@ input {
 }
 input:focus {
   outline: none;
-  border-bottom-color: #000000;
+  border-bottom-color: var(--black);
   border: 2px solid salmon;
   border-style: dashed;
 }
@@ -75,16 +77,16 @@ input:focus {
 button {
   width: 100%;
   display: block;
-  margin: 20px 0;
-  padding: 10px 0;
-  border-radius: 10px;
+  margin: var(--gap) 0;
+  padding: calc(var(--gap)/2) 0;
+  border-radius: calc(var(--gap)/2);
   transition: all 0.5s ease;
 }
 button:hover {
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 0px var(--gap) rgba(0, 0, 0, 0.25);
 }
 .btn-create {
-  background-color: #000000;
+  background-color: var(--black);
   color: white;
 }
 .btn-google {
@@ -94,30 +96,33 @@ button:hover {
 }
 .form-buttons a {
   text-decoration: none;
-  color: #000000;
+  color: var(--black);
 }
 .form-buttons p{
   text-align: center;
 }
 .form-buttons{
-  padding: 10px 0;
+  padding:calc(var(--gap)/2) 0;
 }
 /* Tablet */
-/* @media screen and (max-width: 1400px) {
+@media screen and (max-width: 1400px) {
   .container {
-    width: 90%;
+    width: 100%;
     grid-template-columns: 1fr 1fr;
+    padding: var(--spacing);
   }
   .container .advert h1 {
     font-size: 32px;
   }
 }
 /* mobile */
-/* @media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .container {
-    width: 90%;
+    width: 100%;
     display: block;
+    padding: var(--spacing);
   }
   .container .advert h1 {
     font-size: 32px;
-  } */
+  } 
+}
