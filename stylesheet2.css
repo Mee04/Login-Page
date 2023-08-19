@@ -43,9 +43,22 @@ body {
 .advert h1 {
   font-size: 45px;
   font-weight: 500;
+  /* animation: pulse 2s linear; */
   opacity: 0;
   transform: translateY(-50px);
 }
+
+/* @keyframes pulse{
+  0%{
+    opacity: 0;
+  }
+  50%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
+} */
 .advert:hover h1 {
   opacity: 1;
   cursor: pointer;
